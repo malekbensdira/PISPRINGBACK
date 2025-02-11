@@ -1,4 +1,4 @@
-package tn.esprit.pispring.Entities;
+package tn.esprit.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
