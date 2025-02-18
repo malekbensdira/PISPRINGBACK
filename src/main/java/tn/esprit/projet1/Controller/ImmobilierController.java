@@ -58,4 +58,5 @@ public class ImmobilierController {
             return ResponseEntity.notFound().build();  // Retourne un 404 si l'immobilier n'est pas trouvé
         }
     }
+
 }

@@ -2,12 +2,8 @@ package tn.esprit.projet1.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import lombok.Getter;
-import lombok.Setter;
-
 
 @Entity
-
 public class Immobilier {
 
     @Id
@@ -31,52 +27,41 @@ public class Immobilier {
 
     private String photoPath;
 
+    // 🔹 Localisation du terrain
+    @NotBlank(message = "La ville est obligatoire")
+    private String ville;
+
+    @NotNull(message = "La latitude est obligatoire")
+    private Double latitude;
+
+    @NotNull(message = "La longitude est obligatoire")
+    private Double longitude;
+
     // Getters et Setters
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public String getAdresse() { return adresse; }
+    public void setAdresse(String adresse) { this.adresse = adresse; }
 
-    public String getAdresse() {
-        return adresse;
-    }
+    public Double getPrix() { return prix; }
+    public void setPrix(Double prix) { this.prix = prix; }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
+    public TypeImmobilier getType() { return type; }
+    public void setType(TypeImmobilier type) { this.type = type; }
 
-    public Double getPrix() {
-        return prix;
-    }
+    public Float getSuperficie() { return superficie; }
+    public void setSuperficie(Float superficie) { this.superficie = superficie; }
 
-    public void setPrix(Double prix) {
-        this.prix = prix;
-    }
+    public String getPhotoPath() { return photoPath; }
+    public void setPhotoPath(String photoPath) { this.photoPath = photoPath; }
 
-    public TypeImmobilier getType() {
-        return type;
-    }
+    public String getVille() { return ville; }
+    public void setVille(String ville) { this.ville = ville; }
 
-    public void setType(TypeImmobilier type) {
-        this.type = type;
-    }
+    public Double getLatitude() { return latitude; }
+    public void setLatitude(Double latitude) { this.latitude = latitude; }
 
-    public Float getSuperficie() {
-        return superficie;
-    }
-
-    public void setSuperficie(Float superficie) {
-        this.superficie = superficie;
-    }
-
-    public String getPhotoPath() {
-        return photoPath;
-    }
-
-    public void setPhotoPath(String photoPath) {
-        this.photoPath = photoPath;
-    }
+    public Double getLongitude() { return longitude; }
+    public void setLongitude(Double longitude) { this.longitude = longitude; }
 }
