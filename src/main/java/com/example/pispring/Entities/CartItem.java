@@ -1,9 +1,8 @@
 package com.example.pispring.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -16,7 +15,49 @@ public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private   int idCartItem ;
-    private int cartId;
-    private int itemId;
+
     private  int quantity;
+
+    @ManyToOne
+    @JoinColumn(name = "idCart", nullable = false)
+    @JsonIgnore
+    private Cart cart;
+
+    @ManyToOne
+    @JoinColumn(name = "idItem", nullable = false)
+    @JsonIgnore
+    private Item item;
+
+    public int getIdCartItem() {
+        return idCartItem;
+    }
+
+    public void setIdCartItem(int idCartItem) {
+        this.idCartItem = idCartItem;
+    }
+
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
 }
