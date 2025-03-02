@@ -13,4 +13,5 @@ public interface IItemService {
     Item updateItem(Item item);
     void deleteItem(int id);
     Item addItemToPartner(int partnerId, Item item);
+    void checkStockAndAlert(Item item);
 }

@@ -2,6 +2,7 @@ package com.example.pispring.Entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,7 +26,6 @@ public class CartItem {
 
     @ManyToOne
     @JoinColumn(name = "idItem", nullable = false)
-    @JsonIgnore
     private Item item;
 
     public int getIdCartItem() {

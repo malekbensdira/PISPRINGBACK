@@ -1,5 +1,6 @@
 package com.example.pispring.Entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,12 +20,21 @@ public class Item {
     private float price;
     private String description;
     private String picture;
+    private int stock;
 
     @Enumerated(EnumType.STRING)  // Utilisation de l'énumération comme chaîne
     private Categories category;
 
     @OneToMany(mappedBy = "item")
     private List<CartItem> cartItems;
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 
     @ManyToOne
     @JoinColumn(name = "partner_id", nullable = false) // Clé étrangère
