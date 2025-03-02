@@ -6,6 +6,7 @@ public class CartItemDTO {
     private int idCartItem;
     private int quantity;
     private int itemId;
+    private int cartId;
     private String itemName;
 
     // Constructeur qui transforme un CartItem en DTO
@@ -13,6 +14,7 @@ public class CartItemDTO {
         this.idCartItem = cartItem.getIdCartItem();
         this.quantity = cartItem.getQuantity();
         this.itemId = cartItem.getItem().getIdItem();
+        this.cartId = cartItem.getCart().getIdCart();
         this.itemName = cartItem.getItem().getName();
     }
 
@@ -47,5 +49,13 @@ public class CartItemDTO {
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    public int getCartId() {
+        return cartId;
+    }
+
+    public void setCartId(int cartId) {
+        this.cartId = cartId;
     }
 }

@@ -19,6 +19,8 @@ public class CartItemService implements ICartItemService {
     private CartRepository cartRepository;
     @Autowired
     private ItemService itemService;
+    @Autowired
+    private CartService cartService;
     public CartItemService(CartItemRepository cartItemRepository) {
         this.cartItemRepository = cartItemRepository;
     }
@@ -56,6 +58,7 @@ public class CartItemService implements ICartItemService {
             cartItem.setQuantity(quantity);
             cartItem.setCart(cart);
         }
+        cartService.updateCartTotal(cart);
 
         cartItem = cartItemRepository.save(cartItem);
 
@@ -66,5 +69,28 @@ public class CartItemService implements ICartItemService {
     public Optional<CartItem> getCartItemById(int id) { return cartItemRepository.findById(id); }
     public CartItem saveCartItem(CartItem cartItem) { return cartItemRepository.save(cartItem); }
     public CartItem updateCartItem(CartItem cartItem) { return cartItemRepository.save(cartItem); }
-    public void deleteCartItem(int id) { cartItemRepository.deleteById(id); }
+
+    @Override
+    public void deleteCartItem(int id) {
+        cartItemRepository.deleteById(id);
+    }
+
+    public void removeCartItem(int cartItemId) {
+        Optional<CartItem> cartItemOpt = cartItemRepository.findById(cartItemId);
+
+        if (!cartItemOpt.isPresent()) {
+            throw new RuntimeException("CartItem not found with ID: " + cartItemId);
+        }
+
+        CartItem cartItem = cartItemOpt.get();
+        Cart cart = cartItem.getCart();
+
+        // Mettre à jour le total du panier
+        double newTotal = cart.getTotal() - (cartItem.getItem().getPrice() * cartItem.getQuantity());
+        cart.setTotal(Math.max(0, newTotal)); // Éviter les valeurs négatives
+        cartRepository.save(cart);
+
+        cartItemRepository.delete(cartItem);
+    }
+
 }

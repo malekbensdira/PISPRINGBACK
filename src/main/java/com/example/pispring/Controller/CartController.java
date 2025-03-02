@@ -2,9 +2,12 @@ package com.example.pispring.Controller;
 
 import com.example.pispring.Entities.*;
 import com.example.pispring.Service.*;
+import com.example.pispring.dto.CartDTO;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/cart")
@@ -12,8 +15,12 @@ public class CartController {
     private final CartService cartService;
     public CartController(CartService cartService) { this.cartService = cartService; }
     @GetMapping
-    public List<Cart> getAllCarts() {
-        return cartService.getAllCarts(); }
+    public ResponseEntity<List<CartDTO>> getAllCarts() {
+        List<CartDTO> carts = cartService.getAllCarts().stream()
+                .map(CartDTO::new)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(carts);
+    }
     @GetMapping("/{id}")
     public Optional<Cart> getCartById(@PathVariable int id) { return cartService.getCartById(id); }
     @PostMapping("/addCart")

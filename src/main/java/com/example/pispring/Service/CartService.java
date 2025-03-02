@@ -81,4 +81,14 @@ public class CartService implements ICartService {
         }
     }
 
+    public void updateCartTotal(Cart cart) {
+        double total = 0.0;
+        for (CartItem cartItem : cart.getCartItems()) {
+            total += cartItem.getQuantity() * cartItem.getItem().getPrice();
+        }
+        cart.setTotal(total);
+        cartRepository.save(cart);  // 🔴 Sauvegarde le total mis à jour
+    }
+
+
 }

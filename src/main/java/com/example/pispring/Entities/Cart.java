@@ -22,7 +22,7 @@ public class Cart {
 
     private LocalDateTime datepanier;
     private String status;
-    private float total;
+    private double total;
 
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
 
@@ -61,11 +61,11 @@ public class Cart {
         this.status = status;
     }
 
-    public float getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(float total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 
