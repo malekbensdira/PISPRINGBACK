@@ -1,4 +1,4 @@
 package tn.esprit.projet1.Model;
 
-public class Immobilier {
+public class ClientRecherche {
 }
