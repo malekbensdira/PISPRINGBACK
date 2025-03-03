@@ -3,8 +3,11 @@ package com.example.pispring.Controller;
 import com.example.pispring.Entities.*;
 import com.example.pispring.Service.*;
 import com.example.pispring.dto.CartDTO;
-import org.springframework.http.ResponseEntity;
+import com.itextpdf.text.DocumentException;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -20,6 +23,18 @@ public class CartController {
                 .map(CartDTO::new)
                 .collect(Collectors.toList());
         return ResponseEntity.ok(carts);
+    }
+    @GetMapping("/receipt/{cartId}")
+    public ResponseEntity<byte[]> getReceipt(@PathVariable int cartId) throws DocumentException, IOException {
+        byte[] pdfContent = cartService.generateReceipt(cartId);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_PDF);
+        headers.setContentDisposition(ContentDisposition.attachment()
+                .filename("recu_cart_" + cartId + ".pdf")
+                .build());
+
+        return new ResponseEntity<>(pdfContent, headers, HttpStatus.OK);
     }
     @GetMapping("/{id}")
     public Optional<Cart> getCartById(@PathVariable int id) { return cartService.getCartById(id); }
