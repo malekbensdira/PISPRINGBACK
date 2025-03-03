@@ -1,46 +1,63 @@
 package com.example.BACK.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
-
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 50)
+    @NotNull(message = "Name is required")
+    @Size(min = 2, max = 50, message = "Name must be between 2 and 50 characters")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Name must only contain letters")
     private String nom;
 
-    @Column(nullable = false, length = 50)
+    @NotNull(message = "Surname is required")
+    @Size(min = 2, max = 50, message = "Surname must be between 2 and 50 characters")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Surname must only contain letters")
     private String prenom;
 
-    @Column(nullable = false, unique = true, length = 8)
-    private Integer cin;
+    @NotNull(message = "CIN is required")
+    @Min(value = 10000000, message = "CIN must be an 8-digit number")
+    @Max(value = 99999999, message = "CIN must be an 8-digit number")
+    private int cin;
 
-    @Column(nullable = false, unique = true)
+    @NotNull(message = "Email is required")
+    @Email(message = "Email should be valid")
     private String email;
 
-    @Column(nullable = false)
+    @NotNull
+   // @Size(min = 8, max = 20, message = "Password must be between 8 and 20 characters")
+    @Pattern(regexp = ".*[A-Z].*", message = "Password must contain at least one uppercase letter")
+    @Pattern(regexp = ".*[a-z].*", message = "Password must contain at least one lowercase letter")
+    @Pattern(regexp = ".*\\d.*", message = "Password must contain at least one digit")
+    @Pattern(regexp = ".*[^a-zA-Z0-9].*", message = "Password must contain at least one special character")
     private String mdp;
 
-    @Column(length = 10)
+    @NotNull(message = "Gender is required")
+    @Pattern(regexp = "^(man|woman)$", message = "Gender must be 'man' or 'woman'")
     private String sexe;
 
-    @Column(nullable = false, length = 15)
+    @NotNull(message = "Phone number is required")
+    @Min(value = 10000000, message = "Phone number must be exactly 8 digits")
+    @Max(value = 99999999, message = "Phone number must be exactly 8 digits")
     private Integer tel;
 
-
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
+    @JoinColumn(name = "idRole", nullable = false)
     private Role role;
 
-    @Column(nullable = false)
+    @NotNull(message = "Address is required")
+    @Size(min = 5, max = 100, message = "Address must be between 5 and 100 characters")
     private String adresse;
 
     @Column
@@ -49,12 +66,42 @@ public class User {
     @Column
     private Float soldeCourant = null;
 
-    @Column
-    private Integer rib;
+    @NotNull(message = "RIB is required")
+    @Pattern(regexp = "^[0-9]{20}$", message = "RIB must be exactly 20 digits")
+    private String rib;
 
-    @Column
+    @NotNull(message = "Age is required")
+    @Min(value = 20, message = "Age must be at least 20")
+    @Max(value = 60, message = "Age must be less than 60")
     private Integer age;
 
+    private String passwordResetToken;
+    private LocalDateTime passwordResetTokenExpiration;
+
+    public String getPasswordResetToken() {
+        return passwordResetToken;
+    }
+
+    public void setPasswordResetToken(String passwordResetToken) {
+        this.passwordResetToken = passwordResetToken;
+    }
+
+    public LocalDateTime getPasswordResetTokenExpiration() {
+        return passwordResetTokenExpiration;
+    }
+
+    public void setPasswordResetTokenExpiration(LocalDateTime passwordResetTokenExpiration) {
+        this.passwordResetTokenExpiration = passwordResetTokenExpiration;
+    }
+    @ManyToMany
+    @JoinTable(
+            name = "chat_group_users", // 🔥 Utiliser le vrai nom de la table intermédiaire
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "chat_group_id")
+    )
+    @JsonBackReference
+    private List<ChatGroup> groups;
+    private String resetCode;
     public Long getId() {
         return id;
     }
@@ -79,11 +126,11 @@ public class User {
         this.prenom = prenom;
     }
 
-    public Integer getCin() {
+    public int getCin() {
         return cin;
     }
 
-    public void setCin(Integer cin) {
+    public void setCin(int cin) {
         this.cin = cin;
     }
 
@@ -151,20 +198,33 @@ public class User {
         this.soldeCourant = soldeCourant;
     }
 
-    public Integer getRib() {
+    public String getRib() {
         return rib;
     }
 
-    public void setRib(Integer rib) {
+    public void setRib(String rib) {
         this.rib = rib;
     }
 
     public Integer getAge() {
         return age;
     }
+    public String getResetCode() {
+        return resetCode;
+    }
 
+    public void setResetCode(String resetCode) {
+        this.resetCode = resetCode;
+    }
     public void setAge(Integer age) {
         this.age = age;
     }
-}
 
+    public List<ChatGroup> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List<ChatGroup> groups) {
+        this.groups = groups;
+    }
+}

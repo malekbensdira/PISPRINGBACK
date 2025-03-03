@@ -6,11 +6,17 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    // Méthode pour trouver un utilisateur par son email
-    Optional<User> findByEmail(String email);
+    // Vérifier si un utilisateur existe par email
 
-    // Méthode pour trouver un utilisateur par son CIN
-    Optional<User> findByCin(Integer cin);
+        User findByEmail(String email);  // Méthode pour rechercher un utilisateur par email
 
-    // Ajoutez d'autres méthodes personnalisées si besoin
+       User findByTel(Integer tel);
+
+
+    Optional<User> findById(Long id);
+    // Vérifier si un utilisateur existe par CIN
+    boolean existsByCin(int cin);
+
+    // Trouver un utilisateur par email et mot de passe
+    Optional<User> findByEmailAndMdp(String email, String mdp);
 }

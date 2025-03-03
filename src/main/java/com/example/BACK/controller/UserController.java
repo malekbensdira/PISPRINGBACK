@@ -1,12 +1,19 @@
 package com.example.BACK.controller;
 
+import com.example.BACK.model.Role;
 import com.example.BACK.model.User;
+import com.example.BACK.repository.RoleRepository;
+import com.example.BACK.service.SmsService;
 import com.example.BACK.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/users")
@@ -14,6 +21,12 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private SmsService smsService;
+
+    @Autowired
+    private RoleRepository roleRepository;
 
     // Récupérer tous les utilisateurs
     @GetMapping
@@ -27,33 +40,134 @@ public class UserController {
         return userService.getUsersSortedByName();
     }
 
-
     // Récupérer un utilisateur par son ID
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         User user = userService.getUserById(id);
-        if (user != null) {
-            return ResponseEntity.ok(user);
-        } else {
-            return ResponseEntity.notFound().build(); // Retourner 404 si l'utilisateur n'est pas trouvé
+        return user != null ? ResponseEntity.ok(user) : ResponseEntity.notFound().build();
+    }
+
+    // Enregistrer un utilisateur
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody User user) {
+        try {
+            // Vérifier le rôle comme précédemment
+            Role role = roleRepository.findByNomRole(user.getRole().getNomRole())
+                    .orElseThrow(() -> new IllegalArgumentException("Role not found"));
+
+            user.setRole(role);
+
+            return userService.registerUser(user);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
 
-    // Créer un nouvel utilisateur
-    @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    // Authentification de l'utilisateur
+    @PostMapping("/login")
+    public ResponseEntity<String> loginUser(@RequestBody Map<String, String> credentials) {
+        String email = credentials.get("email");
+        String mdp = credentials.get("mdp");
+
+        // Appeler la méthode d'authentification du service
+        String response = userService.authenticateUser(email, mdp);
+
+        // Si l'authentification réussie, on récupère le rôle de l'utilisateur
+        if (response != null) {
+            String role = userService.getUserRole(email);
+            if ("ADMIN".equals(role)) {
+                return ResponseEntity.ok("Back");
+            } else if ("CLIENT".equals(role)) {
+                return ResponseEntity.ok("Front");
+            } else {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Rôle non autorisé");
+            }
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Email ou mot de passe incorrect");
+        }
     }
 
     // Mettre à jour un utilisateur
     @PutMapping("/{id}")
-    public User updateUser(@PathVariable Long id, @RequestBody User user) {
-        return userService.updateUser(id, user);
+    public ResponseEntity<?> updateUser(@PathVariable Long id, @Valid @RequestBody User user) {
+        return ResponseEntity.ok(userService.updateUser(id, user));
     }
 
     // Supprimer un utilisateur
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
+        return ResponseEntity.ok("Utilisateur supprimé avec succès.");
     }
+
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@RequestParam String tel) {
+        if (tel == null || tel.isEmpty()) {
+            return ResponseEntity.badRequest().body("Invalid phone number");
+        }
+
+        try {
+            Integer phone = Integer.valueOf(tel); // Vérifier que c'est un numéro valide
+            User user = userService.findByPhoneNumber(phone);
+            if (user == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+            }
+
+            // Envoi du SMS avec un code de réinitialisation
+            String resetCode = smsService.sendPasswordResetSms(tel);
+
+            if (resetCode != null) {
+                return ResponseEntity.ok("Reset code sent successfully via SMS.");
+            } else {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to send SMS.");
+            }
+        } catch (NumberFormatException e) {
+            return ResponseEntity.badRequest().body("Invalid phone number format");
+        }
+    }
+
+
+
+//
+//    @PostMapping("/reset-password/{id}")
+//    public ResponseEntity<String> resetPassword(@PathVariable Long id,
+//                                                @RequestParam String resetCode,
+//                                                @RequestParam String newPassword) {
+//        try {
+//            String response = userService.resetPassword(id, resetCode, newPassword);
+//            return ResponseEntity.ok(response); // Retourne un message de succès
+//        } catch (Exception e) {
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+//        }
+//    }
+
+
+
+
+    @PostMapping("/reset-password/{email}")
+    public ResponseEntity<String> resetPasswordByEmail(
+            @PathVariable String email,
+            @RequestBody Map<String, String> body) {
+        String code = body.get("code");
+        String newPassword = body.get("newPassword");
+        userService.resetPasswordByEmail(email, code, newPassword);
+        return ResponseEntity.ok("Password has been successfully reset via email.");
+    }
+
+    // Reset via phone
+    @PostMapping("/reset-password-phone/{phone}")
+    public ResponseEntity<String> resetPasswordByPhone(
+            @PathVariable String phone,
+            @RequestBody Map<String, String> body) {
+        String code = body.get("code");
+        String newPassword = body.get("newPassword");
+        userService.resetPasswordByPhone(phone, code, newPassword);
+        return ResponseEntity.ok("Password has been successfully reset via phone.");
+    }
+
+
+
+
+
 }
