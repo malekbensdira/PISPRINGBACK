@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e8fcb32-6c40-4e74-9797-76cec8c6f42b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AMENA/FRONT/FRONT/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PISPRINGBACK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/controllers/ChambreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/entity/Bloc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/entity/Etudiant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/entity/Foyer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/entity/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/entity/TypeChambre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/entity/Universite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/repositories/BlocRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/repositories/ChambreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/repositories/EtudiantRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/repositories/FoyerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/repositories/ReservationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/repositories/UniversiteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/services/ChambreServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TP/TP/src/main/java/com/example/TP/services/IChambreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/LOGOAMENA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/Statistics_Agent_21.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/chart_Agent_21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/final_chart_Agent_21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/PidevApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/config/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/config/WebSocketHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/ChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/ChatGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/ChatMessageStatisticsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/controller/WebSocketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/flask_service/app/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/flask_service/app/svm_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/flask_service/app/tfidf_vectorizer.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/flask_service/app/train_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/model/ChatGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/model/ChatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/model/ResetCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/repository/ChatGroupRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/repository/ChatMessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/repository/ResetCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/ChatGroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/ChatMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/ChatMessageStatisticsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/MessageAnalysisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/SentimentAnalysisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/SentimentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/SentimentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/SmsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/java/com/example/BACK/service/WebSocketSessionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/src/main/resources/sentiment_dataset.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/CoreNLP-to-HTML.xsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/LIBRARY-LICENSES" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/RESOURCE-LICENSES" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/SemgrexDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ShiftReduceDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/StanfordCoreNlpDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/StanfordDependenciesManual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/corenlp.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/coref/properties/deterministic-english-conll.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/coref/properties/neural-english-conll.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/coref/properties/statistical-english-conll.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/coref/neural/english-model-conll.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/lexparser/englishPCFG.caseless.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/lexparser/englishPCFG.caseless.ser/englishPCFG.caseless.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/ner/english.all.3class.caseless.distsim.crf.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/ner/english.all.3class.caseless.distsim.prop" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/ner/english.conll.4class.caseless.distsim.crf.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/ner/english.conll.4class.caseless.distsim.prop" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/ner/english.muc.7class.caseless.distsim.crf.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/ner/english.muc.7class.caseless.distsim.prop" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/pos-tagger/english-bidirectional-distsim.tagger" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/pos-tagger/english-bidirectional-distsim.tagger.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/pos-tagger/english-caseless-left3words-distsim.tagger" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/pos-tagger/english-caseless-left3words-distsim.tagger.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/sentiment/sentiment.binary.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/srparser/englishSR.beam.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/edu/stanford/nlp/models/srparser/englishSR.ser.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ejml-core-0.39-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ejml-core-0.39.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ejml-ddense-0.39-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ejml-ddense-0.39.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ejml-simple-0.39-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/ejml-simple-0.39.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/input.txt.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/input.txt.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/input.txt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/istack-commons-runtime-3.0.7-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/istack-commons-runtime-3.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jakarta.json-1.1.6-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jakarta.json-1.1.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jakarta.servlet-api-4.0.4-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jakarta.servlet-api-4.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/javax.activation-api-1.2.0-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/javax.activation-api-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jaxb-api-2.4.0-b180830.0359-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jaxb-api-2.4.0-b180830.0359.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jaxb-impl-2.4.0-b180830.0438-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jaxb-impl-2.4.0-b180830.0438.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/joda-time-2.13.0-sources.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/joda-time-2.13.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jollyday-0.4.9-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/jollyday.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/example.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/goldnames.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/goldplaces.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/names.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/otherpeople.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/places.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/presidents.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/patterns/stopwords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/pom-java-11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/pom-java-17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/protobuf-java-3.25.5-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/protobuf-java-3.25.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/sample-project-pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/slf4j-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/slf4j-simple.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/stanford-corenlp-4.5.8-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/stanford-corenlp-4.5.8-models-english.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/stanford-corenlp-4.5.8-models.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/stanford-corenlp-4.5.8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/stanford-corenlp-4.5.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/sutime/british.sutime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/sutime/defs.sutime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/sutime/english.holidays.sutime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/sutime/english.sutime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/sutime/spanish.sutime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/tokensregex/color.input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/tokensregex/color.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/tokensregex/color.rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/tokensregex/retokenize.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/xom-1.3.9-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/BACK/stanford-corenlp-4.5.8/xom.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/auth/auth.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/auth/auth.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/auth/auth.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/auth/auth.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/services/user.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/services/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/signup/signup.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/signup/signup.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/signup/signup.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/app/signup/signup.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/assets/img/LOGOAMENA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/assets/img/User.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/assets/img/fond.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../User Before Integration/FRONT/FRONT/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2rzLOIZ15IBy6S0Mxtb20tSqyeK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.BACK [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.BACK [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.BACK [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.PidevApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Desktop/User+Immobilier/BACK&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.17126437&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="PidevApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BACK" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.BACK.PidevApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e8fcb32-6c40-4e74-9797-76cec8c6f42b" name="Changes" comment="" />
+      <created>1737556922520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737556922520</updated>
+      <workItem from="1737557368537" duration="56000" />
+      <workItem from="1737557467627" duration="155000" />
+      <workItem from="1737557857606" duration="218000" />
+      <workItem from="1737558609096" duration="6711000" />
+      <workItem from="1737573497905" duration="261000" />
+      <workItem from="1737573783209" duration="3821000" />
+      <workItem from="1738063972570" duration="1489000" />
+      <workItem from="1738093248159" duration="13000" />
+      <workItem from="1738093586367" duration="5000" />
+      <workItem from="1738093921830" duration="12000" />
+      <workItem from="1738093962538" duration="5000" />
+      <workItem from="1738095173003" duration="7178000" />
+      <workItem from="1738103180517" duration="651000" />
+      <workItem from="1738180383624" duration="2485000" />
+      <workItem from="1738237830261" duration="625000" />
+      <workItem from="1738571995774" duration="309000" />
+      <workItem from="1738580114052" duration="10000" />
+      <workItem from="1738836180859" duration="606000" />
+      <workItem from="1738842052667" duration="750000" />
+      <workItem from="1738843588381" duration="3726000" />
+      <workItem from="1738930147073" duration="5000" />
+      <workItem from="1738930422960" duration="272000" />
+      <workItem from="1738930785621" duration="428000" />
+      <workItem from="1738931246837" duration="126000" />
+      <workItem from="1738931392017" duration="4961000" />
+      <workItem from="1739005724325" duration="5475000" />
+      <workItem from="1739272230531" duration="863000" />
+      <workItem from="1739274322420" duration="426000" />
+      <workItem from="1739274998280" duration="48000" />
+      <workItem from="1739277514317" duration="22000" />
+      <workItem from="1739281288584" duration="2049000" />
+      <workItem from="1739642144699" duration="2074000" />
+      <workItem from="1739644405370" duration="604000" />
+      <workItem from="1739660016323" duration="3499000" />
+      <workItem from="1739808157484" duration="2365000" />
+      <workItem from="1739825594842" duration="8201000" />
+      <workItem from="1739863493839" duration="4317000" />
+      <workItem from="1739876914470" duration="47000" />
+      <workItem from="1739877767253" duration="217000" />
+      <workItem from="1739878024596" duration="13000" />
+      <workItem from="1739878223327" duration="342000" />
+      <workItem from="1739882995396" duration="21000" />
+      <workItem from="1739883064079" duration="2272000" />
+      <workItem from="1739885639277" duration="4694000" />
+      <workItem from="1739892200969" duration="9770000" />
+      <workItem from="1739908377199" duration="5955000" />
+      <workItem from="1740041518164" duration="108000" />
+      <workItem from="1740041799386" duration="5375000" />
+      <workItem from="1740247067509" duration="4497000" />
+      <workItem from="1740259730434" duration="6445000" />
+      <workItem from="1740414117016" duration="14654000" />
+      <workItem from="1740474607596" duration="2522000" />
+      <workItem from="1740478046061" duration="4621000" />
+      <workItem from="1740506320661" duration="9007000" />
+      <workItem from="1740609813718" duration="158000" />
+      <workItem from="1740822012688" duration="5004000" />
+      <workItem from="1740829956447" duration="2699000" />
+      <workItem from="1740832782652" duration="1379000" />
+      <workItem from="1740834175735" duration="18490000" />
+      <workItem from="1740856836727" duration="22958000" />
+      <workItem from="1740880621402" duration="449000" />
+      <workItem from="1740947547023" duration="218000" />
+      <workItem from="1740947860333" duration="2429000" />
+      <workItem from="1740951368041" duration="3734000" />
+      <workItem from="1740955150488" duration="1076000" />
+      <workItem from="1740956320121" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
